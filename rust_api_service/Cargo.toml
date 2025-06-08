@@ -1,0 +1,21 @@
+[package]
+name = "rust_api_service"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+actix-web = "4.3.1"
+actix-cors = "0.6.4"
+sqlx = { version = "0.6.3", features = ["runtime-tokio-rustls", "postgres", "sqlite", "macros", "chrono", "json", "uuid"] }
+tokio = { version = "1.28.2", features = ["full"] }
+serde = { version = "1.0.171", features = ["derive"] }
+serde_json = "1.0.103"
+config = "0.13.3"
+dotenv = "0.15.0"
+env_logger = "0.10.0"
+log = "0.4.19"
+thiserror = "1.0.43"
+chrono = { version = "0.4.26", features = ["serde"] }
+actix-web-httpauth = "0.8.0"
+actix-rate-limit = "0.3.0"
+uuid = { version = "1.4.1", features = ["serde", "v4"] }
